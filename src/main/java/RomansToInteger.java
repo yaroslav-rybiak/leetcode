@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class RomansToInteger {
 
@@ -7,7 +6,7 @@ public class RomansToInteger {
 
         int result = 0;
 
-        Map<String, Integer> doublesMap = new HashMap<>();
+        HashMap<String, Integer> doublesMap = new HashMap<>();
         doublesMap.put("IV", 4);
         doublesMap.put("IX", 9);
         doublesMap.put("XL", 40);
@@ -15,7 +14,7 @@ public class RomansToInteger {
         doublesMap.put("CD", 400);
         doublesMap.put("CM", 900);
 
-        Map<String, Integer> singlesMap = new HashMap<>();
+        HashMap<String, Integer> singlesMap = new HashMap<>();
         singlesMap.put("I", 1);
         singlesMap.put("V", 5);
         singlesMap.put("X", 10);
@@ -27,7 +26,7 @@ public class RomansToInteger {
         for(String key: doublesMap.keySet()) {
             if(s.contains(key)) {
                 result+=doublesMap.get(key);
-                s = s.replaceFirst(key, "");
+                s = s.replace(key, "");
             }
         }
 
