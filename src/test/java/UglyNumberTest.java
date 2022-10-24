@@ -5,6 +5,7 @@ public class UglyNumberTest {
 
     @Test
     public void testUglyNumber() {
+        Assert.assertFalse(UglyNumber.isUgly(0));
         Assert.assertTrue(UglyNumber.isUgly(1));
         Assert.assertTrue(UglyNumber.isUgly(2));
         Assert.assertTrue(UglyNumber.isUgly(3));
@@ -19,6 +20,7 @@ public class UglyNumberTest {
         Assert.assertTrue(UglyNumber.isUgly(12));
         Assert.assertFalse(UglyNumber.isUgly(13));
         Assert.assertFalse(UglyNumber.isUgly(14));
+        Assert.assertFalse(UglyNumber.isUgly(-1000));
         Assert.assertFalse(UglyNumber.isUgly(-2147483648));
 
     }
